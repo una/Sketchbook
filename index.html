@@ -6,14 +6,24 @@
 	<link rel="stylesheet" href="stylesheets/style.css">
 </head>
 <body>
-	<h1>This is<a href="http://unakravets.com">my</a> Sketchbook</h1>
-	<section class="container">
-		
-	</section>
+	<h1>This is <a href="http://unakravets.com">my</a> Sketchbook</h1>
+	<ul class="container" id="instafeed"></ul>
 
-	<!-- <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>	-->
 	<script src="js/vendor/instafeed.min.js"></script>
 	<script src="js/scripts.js"></script>
+
+	<script type="text/javascript">
+    var userFeed = new Instafeed({
+        get: 'user',
+        tagName: 'sketchbook',
+        userId: 21949685,
+        resolution: 'standard_resolution',
+        clientId: 'b9bc28b31ab44a399a0d1399c09edd70',
+        accessToken: '21949685.467ede5.fe9144097c6e43129005b7ba9b54d3ed',
+         template: '<li class="sketch"><a href="{{link}}"><img src="{{image}}" /></a></li>'
+    });
+    userFeed.run();
+	</script>
 
 </body>
 </html>
