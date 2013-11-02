@@ -13,16 +13,14 @@
 	<script src="js/scripts.js"></script>
 
 	<script type="text/javascript">
-    var userFeed = new Instafeed({
-        get: 'user',
-        tagName: 'sketchbook',
-        userId: 21949685,
+    var feed = new Instafeed({
+        get: 'tagged',
+        tagName: 'unasketch',
         resolution: 'standard_resolution',
         clientId: 'b9bc28b31ab44a399a0d1399c09edd70',
-        accessToken: '21949685.467ede5.fe9144097c6e43129005b7ba9b54d3ed',
-         template: '<li class="sketch"><a href="{{link}}"><img src="{{image}}" /></a></li>'
+        template: '<li class="sketch"><a href="{{link}}"><img src="{{image}}" /></a></li>'
     });
-    userFeed.run();
+    feed.run();
 	</script>
 
 </body>
