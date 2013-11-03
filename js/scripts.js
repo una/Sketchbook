@@ -6,3 +6,8 @@ var feed = new Instafeed({
 	template: '<li class="sketch"><a href="{{link}}"><img src="{{image}}" /></a></li>'
 });
 feed.run();
+
+$('.menu-button').on('click', function(){
+	console.log('menu clicked');
+	// add menu-open class to menu and nav
+});
