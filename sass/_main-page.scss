@@ -5,15 +5,12 @@ html {
 body {
 	@include transition-duration;
 	background-color: $off-white;
-	width: 100%;
 	margin: 0;
 	overflow-x: hidden;
+	width: 100%;
 	&.menu-open {
 		width: 80%;
 		margin: 10%;
-		&.page-dimmer {
-			opacity: 0.5;
-		}
 	}
 }
 
@@ -62,11 +59,4 @@ body {
 	padding: 2em 0;
 	text-align: center;
 	width: 100%;
-}
-
-.page-dimmer {
-	width: 100%;
-	height: 100%;
-	background-color: $midnight-cowboy;
-	opacity: 0;
 }

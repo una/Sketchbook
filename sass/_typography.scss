@@ -30,8 +30,8 @@
 
 h1 {
 	@extend %type--main;
-	font-size: 2.5rem;
 	color: white;
+	font-size: 2.5rem;
 	text-align: center;
 }
 
@@ -42,8 +42,8 @@ p {
 
 a {
 	@include transition-duration;
-	text-decoration: none;
 	color: $ukrave-light;
+	text-decoration: none;
 	&:hover {
 		color: $ukrave-teal;
 	}
