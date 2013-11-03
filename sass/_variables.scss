@@ -5,6 +5,14 @@ $ukrave-teal: #17a39e;
 $lavendar: #c799f4;
 $ukrave-light: #8bd1ce;
 $bg-grey: #6b6b6b;
+	// SIDEBAR LINKS
+	$portfolio-color: $lavendar;
+	$twitter-blue: #00acee;
+	$blog-navy: #34526f;
+	$dribbble-pink: #ea4c89;
+	$github-black: #171515;
+	$codepen-grey: #464646;
+	$side-hover-colors: $portfolio-color, $twitter-blue, $blog-navy, $dribbble-pink, $github-black, $codepen-grey;
 
 //DEFAULTS
 $default-transition-duration: 0.8s;
