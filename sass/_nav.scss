@@ -7,8 +7,17 @@
 	position: fixed;
 	top: 0;
 	width: 16rem;
+	@include breakpoint($mobile) {
+		width: 10rem;
+		left: -10rem;
+	}
 	&.menu-open {
 		left: 0;
+	}
+	h1 {
+		@include breakpoint($mobile) {
+			font-size: 1.7rem;
+		}
 	}
 }
 
@@ -21,6 +30,9 @@
 .icon {
 	width: 3rem;
 	display: inline-block;
+	@include breakpoint($mobile) {
+		width: 1.6rem;
+	}
 }
 
 .menu-btn {
@@ -31,6 +43,10 @@
 	position: absolute; 
 	top: 2rem;
 	left: 2rem;
+	@include breakpoint($mobile) {
+		top: 1rem;
+		left: 1rem;
+	}
 	&:before {
 		content: "";
 		width: 1.5rem;
@@ -42,6 +58,9 @@
 	&.menu-open {
 		left: 18rem;
 		position: fixed;
+		@include breakpoint($mobile) {
+			left: 11rem;
+		}
 	}
 }
 

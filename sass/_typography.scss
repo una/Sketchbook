@@ -43,9 +43,9 @@ p {
 a {
 	@include transition-duration;
 	text-decoration: none;
-	color: $ukrave-teal;
+	color: $ukrave-light;
 	&:hover {
-		color: $lavendar;
+		color: $ukrave-teal;
 	}
 }
 
@@ -54,6 +54,9 @@ a {
 	@extend %type--main;
 	color: white;
 	font-size: 2rem;
+	@include breakpoint($mobile) {
+		font-size: 1.4rem;
+	}
 }
 
 @for $i from 1 through length($side-hover-colors) {
