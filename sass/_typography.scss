@@ -50,9 +50,18 @@ a {
 }
 
 .side-link a{
+	@include transition-duration(0.5s);
 	@extend %type--main;
 	color: $off-white;
 	font-size: 2rem;
+}
+
+@for $i from 1 through length($side-hover-colors) {
+	.side-link:nth-of-type(#{$i}) {
+		a:hover {
+			color: (nth($side-hover-colors, $i));
+		} 
+	}
 }
 
 .icon {
