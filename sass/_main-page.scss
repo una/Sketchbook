@@ -10,13 +10,28 @@ h1 {
 
 .container {
 	width: 100%;
-	margin-left: 0.5%; 
+	margin-left: 0.5%;
+	@include breakpoint ($mobile) {
+		margin-left: 0;
+	}
 }
 
 .sketch {
 	float: left;
 	width: 31%;
 	margin: 1%;
+	@include breakpoint ($small) {
+		width: 48%;
+	}
+	@include breakpoint ($mobile) {
+		width: 98%;
+	}
+	@include breakpoint($large) {
+		width: 23%;
+	}
+	@include breakpoint($super-big) {
+		width: 18%;
+	}
 	img {
 		width: 100%;
 	}
