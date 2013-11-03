@@ -13,6 +13,11 @@ h1 {
 	text-align: center;
 }
 
+p {
+	@extend %type-main;
+	font-size: 1rem;
+}
+
 a {
 	@include transition-duration;
 	text-decoration: none;

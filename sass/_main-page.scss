@@ -1,16 +1,30 @@
-body {
-	background-color: $off-white;
+html {
+	background-color: $ukrave-light;
 }
 
-h1 {
+body {
+	background-color: $off-white;
+	&.menu-open {
+		width: 80%;
+		margin: 10%;
+	}
+}
+
+.header {
 	background-color: $midnight-cowboy;
 	margin-bottom: 1rem;
 	padding: 2em 0;
 }
 
+::selection {
+	background-color: $lavendar;
+	color: $off-white;
+}
+
 .container {
-	width: 100%;
 	margin-left: 0.5%;
+	overflow: hidden;
+	width: 100%;
 	@include breakpoint ($mobile) {
 		margin-left: 0;
 	}
@@ -35,4 +49,11 @@ h1 {
 	img {
 		width: 100%;
 	}
+}
+
+.footer {
+	// background-color: $midnight-cowboy;
+	width: 100%;
+	text-align: center;
+	padding: 2em 0;
 }
