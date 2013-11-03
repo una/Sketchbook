@@ -1,9 +1,13 @@
 html {
 	background-color: $ukrave-light;
+	
 }
 
 body {
+	@include transition-duration;
 	background-color: $off-white;
+	width: 100%;
+	margin: 0;
 	&.menu-open {
 		width: 80%;
 		margin: 10%;

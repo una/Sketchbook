@@ -1,11 +1,15 @@
 .sidebar {
+	@include transition-duration;
 	background-color: $ukrave-teal;
 	bottom: 0;
-	left:0;
+	left: -16rem;
 	padding-top: 1rem;
 	position: fixed;
 	top: 0;
 	width: 16rem;
+	&.menu-open {
+		left: 0;
+	}
 }
 
 .all-links {}

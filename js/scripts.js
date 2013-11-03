@@ -9,5 +9,6 @@ feed.run();
 
 $('.menu-button').on('click', function(){
 	console.log('menu clicked');
+	$('.sidebar, body').addClass('menu-open');
 	// add menu-open class to menu and nav
 });
