@@ -7,8 +7,7 @@ var feed = new Instafeed({
 });
 feed.run();
 
-$('.menu-button').on('click', function(){
+$('.menu-btn').on('click', function(){
 	console.log('menu clicked');
-	$('.sidebar, body').addClass('menu-open');
-	// add menu-open class to menu and nav
+	$('.sidebar, body, .menu-btn').toggleClass('menu-open');
 });
