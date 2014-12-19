@@ -17,4 +17,3 @@ feed.run();
 document.querySelector('.menu-btn').addEventListener('click', function(){
   Array.prototype.forEach.call(document.querySelectorAll('.sidebar, body, .menu-btn'), function(e) { e.classList.toggle('menu-open') })
 } , false);
-
