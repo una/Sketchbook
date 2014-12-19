@@ -6,9 +6,9 @@ var feed = new Instafeed({
 	clientId: 'b9bc28b31ab44a399a0d1399c09edd70',
 	template: '<li class="sketch"><a href="{{link}}"><img src="{{image}}" /></a></li>'
 });
-feed.run();
 
-$('.menu-btn').on('click', function(){
-	console.log('menu clicked');
-	$('.sidebar, body, .menu-btn').toggleClass('menu-open');
-});
+document.querySelector('.menu-btn').addEventListener('click', function(){
+  Array.prototype.forEach.call(document.querySelectorAll('.sidebar, body, .menu-btn'), function(e) { e.classList.toggle('menu-open') })
+} , false);
+
+feed.run();
