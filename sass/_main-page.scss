@@ -1,62 +1,67 @@
 html {
-	background-color: $bg-grey;
+  background-color: $bg-grey;
 }
 
 body {
-	@include transition-duration;
-	background-color: $off-white;
-	margin: 0;
-	overflow-x: hidden;
-	width: 100%;
-	&.menu-open {
-		width: 80%;
-		margin: 10%;
-	}
+  width: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  background-color: $off-white;
+
+  @include transition-duration;
+
+  &.menu-open {
+    width: 80%;
+    margin: 10%;
+  }
 }
 
 .header {
-	background-color: $midnight-cowboy;
-	margin-bottom: 1rem;
-	padding: 2em 0;
+  padding: 2em 0;
+  margin-bottom: 1rem;
+  background-color: $midnight-cowboy;
 }
 
 ::selection {
-	background-color: $lavendar;
-	color: $off-white;
+  color: $off-white;
+  background-color: $lavendar;
 }
 
 .container {
-	margin: 0 -0.5% 0 0.5%;
-	overflow: hidden;
-	width: 100%;
-	@include breakpoint ($mobile) {
-		margin-left: 0;
-	}
+  width: 100%;
+  margin: 0 -.5% 0 .5%;
+  overflow: hidden;
+
+  @include breakpoint ($mobile) {
+    margin-left: 0;
+  }
 }
 
 .sketch {
-	float: left;
-	width: 31%;
-	margin: 1%;
-	@include breakpoint ($small) {
-		width: 48%;
-	}
-	@include breakpoint ($mobile) {
-		width: 98%;
-	}
-	@include breakpoint($large) {
-		width: 23%;
-	}
-	@include breakpoint($super-big) {
-		width: 18%;
-	}
-	img {
-		width: 100%;
-	}
+  float: left;
+  width: 31%;
+  margin: 1%;
+
+  @include breakpoint ($small) {
+    width: 48%;
+  }
+  @include breakpoint ($mobile) {
+    width: 98%;
+  }
+  @include breakpoint($large) {
+    width: 23%;
+  }
+  @include breakpoint($super-big) {
+    width: 18%;
+  }
+
+  img {
+    width: 100%;
+  }
 }
 
 .footer {
-	padding: 2em 0;
-	text-align: center;
-	width: 100%;
+  width: 100%;
+  padding: 2em 0;
+  text-align: center;
 }

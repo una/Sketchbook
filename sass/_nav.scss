@@ -1,74 +1,80 @@
 .sidebar {
-	@include transition-duration;
-	background-color: $ukrave-teal;
-	bottom: 0;
-	left: -16rem;
-	padding-top: 1rem;
-	position: fixed;
-	top: 0;
-	width: 16rem;
-	@include breakpoint($mobile) {
-		width: 10rem;
-		left: -10rem;
-	}
-	&.menu-open {
-		left: 0;
-	}
-	h1 {
-		@include breakpoint($mobile) {
-			font-size: 1.7rem;
-		}
-	}
+  @include transition-duration;
+  background-color: $ukrave-teal;
+  bottom: 0;
+  left: -16rem;
+  padding-top: 1rem;
+  position: fixed;
+  top: 0;
+  width: 16rem;
+
+  @include breakpoint($mobile) {
+    width: 10rem;
+    left: -10rem;
+  }
+
+  &.menu-open {
+    left: 0;
+  }
+
+  h1 {
+    @include breakpoint($mobile) {
+      font-size: 1.7rem;
+    }
+  }
 }
 
-.all-links {}
-
 .side-link {
-	margin: 1rem 2rem;
+  margin: 1rem 2rem;
 }
 
 .icon {
-	width: 3rem;
-	display: inline-block;
-	@include breakpoint($mobile) {
-		width: 1.6rem;
-	}
+  width: 3rem;
+  display: inline-block;
+
+  @include breakpoint($mobile) {
+    width: 1.6rem;
+  }
 }
 
 .menu-btn {
-	@include transition-duration;
-	cursor: pointer;
-	display: block;
-	height: 50px;
-	left: 2rem;
-	position: absolute; 
-	top: 2rem;
-	width: 50px;
-	&:hover {
-		&:before {
-			@include transition-duration;
-			border-bottom: 0.2rem solid $ukrave-teal;
-			border-top: 0.6rem double $ukrave-teal;
-		}
-	}
-	@include breakpoint($mobile) {
-		left: 1rem;
-		top: 1rem;
-	}
-	&:before {
-		border-bottom: 0.2rem solid $off-white;
-		border-top: 0.6rem double $off-white;
-		content: "";
-		height: 0.2rem;
-		position: absolute;
-		width: 1.5rem;
-	}
-	&.menu-open {
-		left: 18rem;
-		position: fixed;
-		@include breakpoint($mobile) {
-			left: 11rem;
-		}
-	}
+  @include transition-duration;
+  cursor: pointer;
+  display: block;
+  height: 50px;
+  left: 2rem;
+  position: absolute;
+  top: 2rem;
+  width: 50px;
+
+  &:hover {
+    &:before {
+      @include transition-duration;
+      border-bottom: 0.2rem solid $ukrave-teal;
+      border-top: 0.6rem double $ukrave-teal;
+    }
+  }
+
+  @include breakpoint($mobile) {
+    left: 1rem;
+    top: 1rem;
+  }
+
+  &:before {
+    border-bottom: 0.2rem solid $off-white;
+    border-top: 0.6rem double $off-white;
+    content: "";
+    height: 0.2rem;
+    position: absolute;
+    width: 1.5rem;
+  }
+
+  &.menu-open {
+    left: 18rem;
+    position: fixed;
+    @include breakpoint($mobile) {
+      left: 11rem;
+    }
+  }
 }
 

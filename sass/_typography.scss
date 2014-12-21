@@ -1,72 +1,76 @@
 @mixin fontface($font-family, $file-path, $weight: normal, $style: normal ) {
   @font-face {
     font-family: $font-family;
+    font-style: $style;
+    font-weight: $weight;
     src: url('#{$file-path}.eot');
     src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'),
-           url('#{$file-path}.woff') format('woff'),
-           url('#{$file-path}.ttf') format('truetype'),
-           url('#{$file-path}.svg##{$font-family}') format('svg');
-    font-weight: $weight;
-    font-style: $style;
+    url('#{$file-path}.woff') format('woff'),
+    url('#{$file-path}.ttf') format('truetype'),
+    url('#{$file-path}.svg##{$font-family}') format('svg');
   };
 };
 
-@include fontface("icomoon", "../fonts/icomoon", normal, normal);
+@include fontface('icomoon', '../fonts/icomoon', normal, normal);
 
 %type--main {
-	font: {
-		family: 'Advent Pro', sans-serif;
-		weight: 300;
-		size: 62.5%;
-	}
+  font-family: 'Advent Pro', sans-serif;
+  font-size: 62.5%;
+  font-weight: 300;
 }
 
 %type--icon-font {
-	font: {
-		family: 'icomoon';
-		size: 62.5%;
-	}
+  font-family: 'icomoon';
+  font-size: 62.5%;
 }
 
 h1 {
-	@extend %type--main;
-	color: white;
-	font-size: 2.5rem;
-	text-align: center;
+  font-size: 2.5rem;
+  color: white;
+  text-align: center;
+
+  @extend %type--main;
 }
 
 p {
-	@extend %type--main;
-	font-size: 1rem;
+  font-size: 1rem;
+
+  @extend %type--main;
 }
 
 a {
-	@include transition-duration;
-	color: $ukrave-light;
-	text-decoration: none;
-	&:hover {
-		color: $ukrave-teal;
-	}
+  color: $ukrave-light;
+  text-decoration: none;
+
+  @include transition-duration;
+
+  &:hover {
+    color: $ukrave-teal;
+  }
 }
 
-.side-link a{
-	@include transition-duration(0.5s);
-	@extend %type--main;
-	color: white;
-	font-size: 2rem;
-	@include breakpoint($mobile) {
-		font-size: 1.4rem;
-	}
+.side-link a {
+  font-size: 2rem;
+  color: white;
+
+  @include transition-duration(.5s);
+  @extend %type--main;
+  @include breakpoint($mobile) {
+    font-size: 1.4rem;
+  }
 }
 
 @for $i from 1 through length($side-hover-colors) {
-	.side-link:nth-of-type(#{$i}) {
-		a:hover, span {
-			color: (nth($side-hover-colors, $i));
-		} 
-	}
+
+  .side-link:nth-of-type(#{$i}) {
+
+    a:hover,
+    span {
+      color: (nth($side-hover-colors, $i));
+    }
+  }
 }
 
 .icon {
-	@extend %type--icon-font;
+  @extend %type--icon-font;
 }

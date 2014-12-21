@@ -5,17 +5,17 @@ $ukrave-teal: #17a39e;
 $lavendar: #c799f4;
 $ukrave-light: #8bd1ce;
 $bg-grey: #6b6b6b;
-	// SIDEBAR LINKS
-	$portfolio-color: #f7941e;
-	$twitter-blue: #00acee;
-	$blog-navy: #34526f;
-	$dribbble-pink: #ea4c89;
-	$github-black: #6CC644;
-	$codepen-black: #171515;
-	$side-hover-colors: $portfolio-color, $blog-navy, $twitter-blue, $github-black, $dribbble-pink,  $codepen-black;
+// SIDEBAR LINKS
+$portfolio-color: #f7941e;
+$twitter-blue: #00acee;
+$blog-navy: #34526f;
+$dribbble-pink: #ea4c89;
+$github-black: #6cc644;
+$codepen-black: #171515;
+$side-hover-colors: $portfolio-color, $blog-navy, $twitter-blue, $github-black, $dribbble-pink,  $codepen-black;
 
 //DEFAULTS
-$default-transition-duration: 0.8s;
+$default-transition-duration: .8s;
 
 // BREAKPOINTS //
 $mobile: max-width 400px;
